@@ -1,5 +1,5 @@
 type Query {
-  health: String
+  health123: String
 }
 
 schema {
