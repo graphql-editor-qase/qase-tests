@@ -19,6 +19,8 @@ input createPost{
 	userId: Int
 	body: String
 	title: String
+	title2: String
+	test: Int
 }
 
 interface IPost{
