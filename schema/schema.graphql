@@ -1,7 +1,31 @@
-type Query {
-  health4321: String
+type Query{
+	post: Post
 }
 
-schema {
-  query: Query
+type Mutation{
+	createPost(
+		createPost: createPost
+	): Post
+}
+
+type Post implements IPost{
+	id: ID
+	userId: String
+	title: String
+	body: String
+}
+
+input createPost{
+	userId: Int
+	body: String
+	title: String
+}
+
+interface IPost{
+	title: String
+	body: String
+}
+schema{
+	query: Query,
+	mutation: Mutation
 }
