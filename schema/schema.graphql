@@ -9,8 +9,12 @@ type Mutation{
 }
 
 type Post implements IPost{
-	id: ID
-	userId: String
+	id(
+		string: String
+		sfsf: String
+		afafsafsafsfas: String
+	): ID
+	fasafsfas: String
 	title: String
 	body: String
 }
@@ -19,13 +23,100 @@ input createPost{
 	userId: Int
 	body: String
 	title: String
-	title2: String
-	test: Int
 }
 
+"""
+asfasfasffs
+"""
 interface IPost{
 	title: String
 	body: String
+}
+
+type PostCopy implements IPost{
+	id(
+		string: String
+		sfsf: String
+		afafsafsafsfas: String
+	): ID
+	fasafsfas: String
+	title: String
+	body: String
+}
+
+extend type Query{
+	boolean: Boolean
+}
+
+extend type Post{
+	boolean: Boolean
+}
+
+union test = Mutation | Query
+
+extend union test = PostCopy
+
+type tescik{
+	string: String
+	boolean: Boolean
+	dupa: String
+	dupa2: String
+	string1: String
+	string2: String
+	string3: String
+	string4: String
+	string5: String
+	string6: String
+	string7: String
+	string8: String
+	string9: String
+	string10: String
+	string11: String
+	string12: String
+	string13: String
+	string14: String
+	string15: String
+	string16: String
+	string17: String
+	string18: String
+	string19: String
+	string20: String
+	string21: String
+	string22: String
+	string23: String
+	string24: String
+	string25: String
+	string26: String
+	string27: String
+	string28: String
+	string29: String
+	string30: String
+	string31: String
+	string32: String
+	string33: String
+	string34: String
+	string35: String
+}
+
+enum animals{
+	pies
+}
+
+enum colors{
+	blue
+	yellow
+	black
+	red
+}
+
+enum testowa{
+	asfasf
+	asfasf1
+	asfasfasafs
+	asfafs
+	asfasffas
+	asfasf4
+	asfasfasafs1
 }
 schema{
 	query: Query,
